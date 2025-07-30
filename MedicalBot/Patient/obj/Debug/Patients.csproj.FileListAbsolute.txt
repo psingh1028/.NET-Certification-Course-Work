@@ -1,0 +1,6 @@
+D:\VS Projects\MedicalBot\Patient\obj\Debug\Patients.csproj.AssemblyReference.cache
+D:\VS Projects\MedicalBot\Patient\obj\Debug\Patients.csproj.CoreCompileInputs.cache
+D:\VS Projects\MedicalBot\Patient\bin\Debug\Patient.dll
+D:\VS Projects\MedicalBot\Patient\bin\Debug\Patient.pdb
+D:\VS Projects\MedicalBot\Patient\obj\Debug\Patient.dll
+D:\VS Projects\MedicalBot\Patient\obj\Debug\Patient.pdb
