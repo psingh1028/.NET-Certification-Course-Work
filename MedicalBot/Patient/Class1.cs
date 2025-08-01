@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class Patient
 {
@@ -20,7 +21,7 @@ public class Patient
         this.prescription = prescription;
     }
     //getters
-    public string GetName()    {return name;}
+    public string GetName() { return name; }
     public int GetAge() { return age; }
     public string GetGender() { return gender; }
     public string GetMedicalHistory() { return medicalHistory; }
@@ -31,7 +32,7 @@ public class Patient
     public void SetName(string name)
     {
         this.name = name;
-      }
+    }
     public void SetAge(int age) { this.age = age; }
     public void SetGender(string gender) { this.gender = gender; }
     public void SetMedicalHistory(string medicalHistory) { this.medicalHistory = medicalHistory; }
@@ -44,48 +45,28 @@ public class Patient
         {
             case "headache":
                 {
-                    if (patient.GetAge() < 18)
-                    {
-                        patient.SetPrescription("400 mg ibuprofen");
-                        break;
-                    }
-                    else
-                        patient.SetPrescription("800 mg ibuprofen");
+                    patient.SetPrescription("ibuprofen");
+                    Console.WriteLine("Medical Bot recommends " + GetDosage(patient.GetPrescription()) + " of " + patient.GetPrescription());
                     break;
                 }
             case "skin rashes":
                 {
-                    if (patient.GetAge() < 18)
-                    {
-                        patient.SetPrescription("50 mg diphenhydramine");
-                        break;
-                    }
-                    else
-                        patient.SetPrescription("300 mg diphenhydramine");
+                    patient.SetPrescription("diphenhydramine");
+                    Console.WriteLine("Medical Bot recommends " + GetDosage(patient.GetPrescription()) + " of " + patient.GetPrescription());
                     break;
                 }
             case "dizziness":
                 {
                     if (patient.GetMedicalHistory().ToLower().Contains("diabetes"))
                     {
-                        if (patient.GetAge() < 18)
-                        {
-                            patient.SetPrescription("500 mg metformin");
-                            break;
-                        }
-                        else
-                            patient.SetPrescription("500 mg metformin");
+                        patient.SetPrescription("metformin");
+                        Console.WriteLine("Medical Bot recommends " + GetDosage(patient.GetPrescription()) + " of " + patient.GetPrescription());
                         break;
                     }
                     else
                     {
-                        if (patient.GetAge() < 18)
-                        {
-                            patient.SetPrescription("50 mg diphenhydramine");
-                            break;
-                        }
-                        else
-                            patient.SetPrescription("400 mg diphenhydramine");
+                        patient.SetPrescription("diphenhydramine");
+                        Console.WriteLine("Medical Bot recommends " + GetDosage(patient.GetPrescription()) + " of " + patient.GetPrescription());
                         break;
                     }
                 }
@@ -94,9 +75,37 @@ public class Patient
                     Console.WriteLine("No prescription available for the given symptom code.");
                     break;
                 }
+
+                string GetDosage(string medicine)
+                {
+                    if (medicine == "ibuprofen")
+                    {
+                        return patient.GetAge() < 18 ? "400 mg" : "800 mg";
+                    }
+                    else if (medicine == "diphenhydramine")
+                    {
+                        return patient.GetAge() < 18 ? "50 mg" : "300 mg";
+                    }
+                    else if (medicine == "metformin")
+                    {
+                        return patient.GetAge() < 18 ? "500 mg" : "500 mg";
+                    }
+                    else
+                    {
+                        return "unknown dosage";
+                    }
+                }
         }
+
+
+
     }
 
 
 
+
+
 }
+
+
+
