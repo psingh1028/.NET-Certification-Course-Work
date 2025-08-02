@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMPin", "ATMPin\ATMPin.csproj", "{0771A6B1-E358-498B-8FB1-318A1ED1B4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{AC1F30FF-8444-4F53-B15A-3FF3C7CD587D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0771A6B1-E358-498B-8FB1-318A1ED1B4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0771A6B1-E358-498B-8FB1-318A1ED1B4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0771A6B1-E358-498B-8FB1-318A1ED1B4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0771A6B1-E358-498B-8FB1-318A1ED1B4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1F30FF-8444-4F53-B15A-3FF3C7CD587D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1F30FF-8444-4F53-B15A-3FF3C7CD587D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1F30FF-8444-4F53-B15A-3FF3C7CD587D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1F30FF-8444-4F53-B15A-3FF3C7CD587D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C83D3A4D-F523-4295-9807-22E13B8706FF}
+	EndGlobalSection
+EndGlobal
